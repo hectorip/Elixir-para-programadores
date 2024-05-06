@@ -177,6 +177,7 @@ mi_lista = [1 | [2, 3, 4]]
 # Por útltimo, ¿cómo accedemos a un elemento específico de una lista?
 # NO SE RECOMIENDA hacerlo, sino tratar con las listas de manera completa,
 # pero si de verdad lo necesitas puedes usar el módulo `Enum`:
+
 Enum.at(mi_lista, 1)
 
 # Tuplas
