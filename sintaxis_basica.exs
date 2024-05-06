@@ -178,8 +178,13 @@ mi_lista = [1 | [2, 3, 4]]
 # NO SE RECOMIENDA hacerlo, sino tratar con las listas de manera completa,
 # pero si de verdad lo necesitas puedes usar el módulo `Enum`:
 Enum.at(mi_lista, 1)
+
 # Tuplas
 #
 # Ahora pasemos a hablar de tuplas
-# Las tuplas sirven para agrupar valor
-# 
+# Las tuplas sirven para agrupar valores al igulaa que las listas, pero
+# las tuplas no permiten operaciones como la concatenación o modificación de 
+# de elementos para crear nuevas tuplas. Básicamente las creas y las usas.
+# Se crean con llaves, agrupando los valores que necesitas.
+
+{:mi_tupla, 1, "dos"}
