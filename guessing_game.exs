@@ -46,8 +46,8 @@ defmodule Evaluator do
     end
   end
 
-  def evaluate(_, 0) do
-    IO.puts("¡Lo siento! ¡No adivinaste!")
+  def evaluate(secret_number, 0) do
+    IO.puts("¡Lo siento! ¡No adivinaste! El numero era: #{secret_number}")
   end
 end
 

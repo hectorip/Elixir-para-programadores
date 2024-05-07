@@ -262,4 +262,44 @@ mi_keyword_list = [nombre: "Hector", edad: 34]
 # ser de cualquier tipo de dato, para asociar una llave con un valor se usa una flecha 
 # gorda: `=>`, y se pueden usar con su módulo `Map`
 
-persona = %{:nombre => "Hector", :edad => 34}
+persona = %{"nombre" => "Hector", :edad => 34}
+
+# Puedes ver que las llaves tienen diferentes tipos de datos, pero si quieres usar
+# átomos, puedes también usar una sintaixs especial
+
+persona = %{nombre: "Hector", edad: 34}
+
+# Traer un elemento:
+
+Map.get(persona, :nombre)
+
+# Si traes un elemento que no existe, te deuleve el elemento que no no existe,
+# te devuelve `nil`, que es el valor nulo en Elixir, pero también puedes pasarle un
+# un valor default, igual que en Python.
+
+Map.get(persona, :telefono, "No tiene teléfono")
+
+# otras formas de acceder a los elementos son:
+
+# cuando tienes llaves de diferentes tipos:
+
+persona[:nombre]
+
+# cuando tienes llaves que son átomos:
+
+persona.nombre
+
+# La versión con corchetHes es equivalente al Map.get con la desventaja de que 
+# no le puede mandar valor default, y la versión con punto te dará un error
+# en ejecución si la llave no existe, terminando el proceso.
+#
+# Una función muy interesante es la de `update`, que te permite crear un nuevo diccionario
+
+persona =
+  Map.update(persona, :nombre, "Desconocido", fn anterior -> String.capitalize(anterior) end)
+
+# Esta función, como muchas otas, toma una función para modificar el valor.
+# Solo tienes que recordar que ninguna función como tal modifica el diccionario, sino que se
+# crea uno nuevo y por eso tenemos que asignarlo de nuevo prefetentemente a la misma
+# variable para que se cree la ilusión de que se modifció.
+#
