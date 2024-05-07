@@ -183,9 +183,63 @@ Enum.at(mi_lista, 1)
 # Tuplas
 #
 # Ahora pasemos a hablar de tuplas
-# Las tuplas sirven para agrupar valores al igulaa que las listas, pero
+# Las tuplas sirven para agrupar valores al igual que las listas, pero
 # las tuplas no permiten operaciones como la concatenación o modificación de 
 # de elementos para crear nuevas tuplas. Básicamente las creas y las usas.
 # Se crean con llaves, agrupando los valores que necesitas.
 
 {:mi_tupla, 1, "dos"}
+
+# Cuando algo da como resultado una tupla (que es muy común con funciones quote do
+# pueden fallar), usamos el emparejamiento de patrones para extraer los valores
+# de la tupla, pero también para verificar si la función tuvo éxito o no.
+
+{:ok, resultado} = File.open("archivo.txt", [:read])
+
+# El módulo `File` tiene una función `open`, que recicebe dos arrgumentos,
+# el primero es el nombre del archivoy el segundo una lista de los modos
+# en los que quieres abrir el archivo.
+# Si no tenemos un archivo `archivo.txt` en el directorio, la función `open`
+# va a fallar, devolviendo un tupla que en la primera posición tiene
+# `:error` y en la segunda posición el error especfífco, que en este caso
+# sería `:enoent`, que significa "Ese archivo o directorio no existe".
+
+# ¿Qué pasaría entonces con nuestra expresión de arriba?
+# Recuerda que como `=` intenta emperejar valores y si la función devuelve
+# :error y lo intentamos empazar con :ok, Elixir va fallar y terminar el proceso.
+
+# Aquí vale la pena introducir nuestra primer estructura de control, el `case`
+# Suponemos que queremos leer si existe el archivo, pero no crearlo si no existe.
+# `case` nos ayuda a manejar los diferentes posibles resultados de una expresión
+# y tomar un branch del programa dependiendo de eso.
+
+case File.open("archivo.txt", [:read]) do
+  {:ok, archivo} ->
+    IO.puts("Archivo abierto")
+    File.close(archivo)
+
+  {:error, :enoent} ->
+    IO.puts("El archivo no existe")
+end
+
+# case recibe una expresión y después de la para la palabra clave `do`
+# tenemos que listar los valores contra los que hará pattern matching
+# y funciona exactamente como un switch de otros lenguajes, cuando
+# pueda emerejarlo con un valor, entonces ejecutará ese código.
+#
+# Sólo ejecutará uno de los "brazos" o bloques y nada si no puede hacer
+# match con ninguno de los valores.
+#
+# Como las tuplas casi siempre se usan para hacer pattern matching, vale
+# la pena mencionar una variable con un nombre especial: `_`
+# Si no vas a ocuupar un valor y no quieres que el compilador de Elixir
+# te muestre un aviso, usa esta vairable, por ejemplo:
+
+{:error, _} = File.open("archivo.txt", [:read])
+
+# La última cosa que vamos hablar de las tuplas está en con combinación
+# con los átomos y las listas
+# Estos se llaman KeywordLists
+#
+# Son listas de tuplas de dos elementos, donde el primer elemento es un átomo
+# 
