@@ -239,7 +239,16 @@ end
 
 # La última cosa que vamos hablar de las tuplas está en con combinación
 # con los átomos y las listas
-# Estos se llaman KeywordLists
+# Estos se llaman KeywordList
 #
 # Son listas de tuplas de dos elementos, donde el primer elemento es un átomo
-# 
+# forzosamente y el segundo elemento puede ser lo que quieras.
+#
+# Estas listas existen por compatibilidad con Erlang en donde se usan mucho.
+# Esto es un KeywordList:
+#
+mi_keyword_list = [{:nombre, "Hector"}, {:edad, 34}]
+
+# Pero son tan comunes que hay una sintaxis especial para crearlas
+#
+mi_keyword_list = [nombre: "Hector", edad: 34]
