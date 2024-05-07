@@ -252,3 +252,14 @@ mi_keyword_list = [{:nombre, "Hector"}, {:edad, 34}]
 # Pero son tan comunes que hay una sintaxis especial para crearlas
 #
 mi_keyword_list = [nombre: "Hector", edad: 34]
+
+# Tienen muchas funciones parecidas a los diccionarios y tienen su propio módulo
+# para trabajar con ellas, `Keyword` pero también puedes usar funciones de `Enum` y `List`
+# porque cumplen con esas dos interfaces.
+
+# Por último hablemos de diccionarios que son otra de las colecciones que 
+# ocuparás muy seguido. Los diccionarios se definen con `%{}`, las llaves pueden
+# ser de cualquier tipo de dato, para asociar una llave con un valor se usa una flecha 
+# gorda: `=>`, y se pueden usar con su módulo `Map`
+
+persona = %{:nombre => "Hector", :edad => 34}
