@@ -303,3 +303,19 @@ persona =
 # crea uno nuevo y por eso tenemos que asignarlo de nuevo prefetentemente a la misma
 # variable para que se cree la ilusión de que se modifció.
 #
+# Con eso terminamos las colecciones báiscas de Elixir, veamos ahora un poco de control de  flujo y 
+# organización ZZde código, para terminar con este mini tutorial de la sintaxis básica, el sieuiente paso
+# será empezar a hacer programas.
+#
+# Empecemos con algo que es inconfundible de los lengaujes funcionales y que hasta
+# operadores especiales tienen: la composición de funciones.
+
+# Llamamos coponer dos funciones cuando el resultado de una se lo pasamos a otra,
+# por ejemplo imagina una serie de transformación de datos que se hacen una tras otra, pensemos
+# en formatear un texto o transforma una cadena que representa un número en un número entero.
+
+# En un lenguaje sin operador de composición, podríamos hacer algo así
+
+mi_cadena_de_texto = " 123 "
+
+mi_numero = String.to_integer(String.trim(mi_cadena_de_texto))
