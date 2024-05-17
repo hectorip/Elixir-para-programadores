@@ -319,3 +319,11 @@ persona =
 mi_cadena_de_texto = " 123 "
 
 mi_numero = String.to_integer(String.trim(mi_cadena_de_texto))
+
+# Los programadores ya nos acostumbramos a esto, pero es un poco antinatural
+# tener que irse al fondo y después regresar al principio para saber qué proceso
+# por el que los datos pasaron.
+
+# En Elixir y en muchos lengaujes funcionales existe el operador `|>` o uno parecido,
+# que le podemos llamar "pipe" o "tubería" en español, que nos permite hacer lo mismo
+# pero de una forma más natural.
