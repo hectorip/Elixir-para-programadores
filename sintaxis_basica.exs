@@ -327,3 +327,8 @@ mi_numero = String.to_integer(String.trim(mi_cadena_de_texto))
 # En Elixir y en muchos lengaujes funcionales existe el operador `|>` o uno parecido,
 # que le podemos llamar "pipe" o "tubería" en español, que nos permite hacer lo mismo
 # pero de una forma más natural.
+
+mi_numero = mi_cadena_de_texto |> String.trim() |> String.to_integer()
+
+# Esta forma de ver fluir los datos es mucho más natural ya que avanzan
+# En el mismo sentido en el que están escritas las tranformaciones.
