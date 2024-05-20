@@ -330,5 +330,12 @@ mi_numero = String.to_integer(String.trim(mi_cadena_de_texto))
 
 mi_numero = mi_cadena_de_texto |> String.trim() |> String.to_integer()
 
-# Esta forma de ver fluir los datos es mucho más natural ya que avanzan
-# En el mismo sentido en el que están escritas las tranformaciones.
+# Esta forma de ver "fluir" los datos es mucho más natural, ya que avanzan
+# en el mismo sentido en el que están escritas las tranformaciones
+
+# Esta forma de trabajar es muy común en Elixir, te acostumbras a ver la información "fluir"
+# Otro ejemplo:
+
+1..10
+|> Enum.map(fn x -> x * x end)
+|> Enum.reduce(0, fn x, acc -> x + acc end)
