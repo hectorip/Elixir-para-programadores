@@ -6,5 +6,19 @@
 # Empecemos defininedo un módulo.
 
 defmodle ModulosYFunciones do
-  # E
+  @moduledoc """
+  Esta es la documentación del módulo que se puede extraer de manera
+  automática con la herramienta de ExDoc. Es una buena idea documentar
+  los módulos y las funciones aquí porque esta cerca de la definición
+  y porque se puede generar un documento independiente.
+
+  """
+  def saludar(nombre) do
+    IO.puts("Hola #{nombre}")
+  end
+
+  def saludar(nombre, apellido) do
+  end
+
+  #
 end
