@@ -339,3 +339,15 @@ mi_numero = mi_cadena_de_texto |> String.trim() |> String.to_integer()
 1..10
 |> Enum.map(fn x -> x * x end)
 |> Enum.reduce(0, fn x, acc -> x + acc end)
+
+# Aquí acabas de ver tres cosas a parte de el `pipe operator` que son diferentes en
+# Elixir:
+#
+# - El rango `1..10` que define una colección de números desde el primer
+# número hasta el último, de uno en uno incluyendo ambos
+# - El módulo `Enum` que contiene funciones para trabajar con colecciones enumerables
+# y que tiene dos funciones que se usan mucho para trabajar con listas: `map` para
+# crear otra lista del mismo tamaño pero con los resultados de llamar la función
+# que recibe como argumento y a la que se le pasa cada elemento del enumerable
+# y `reduce` que también recibe una función que va acumlando el resultado del cálculo
+# y sólo devuelve ese valor final (poe eso se llama `reduce`).
