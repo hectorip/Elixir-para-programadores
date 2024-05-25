@@ -350,4 +350,7 @@ mi_numero = mi_cadena_de_texto |> String.trim() |> String.to_integer()
 # crear otra lista del mismo tamaño pero con los resultados de llamar la función
 # que recibe como argumento y a la que se le pasa cada elemento del enumerable
 # y `reduce` que también recibe una función que va acumlando el resultado del cálculo
-# y sólo devuelve ese valor final (poe eso se llama `reduce`).
+# y sólo devuelve ese valor final (por eso se llama `reduce`).
+
+# Me parece que eso es todo lo que necesitas saber de la sintaxis pura de Elixir
+# el siguiente paso es aprender sobre módulos y funciones nombradas.
