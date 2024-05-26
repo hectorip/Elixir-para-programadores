@@ -355,3 +355,4 @@ mi_numero = mi_cadena_de_texto |> String.trim() |> String.to_integer()
 # Me parece que eso es todo lo que necesitas saber de la sintaxis pura de Elixir
 # el siguiente paso es aprender sobre módulos y funciones nombradas.
 # 
+# Para esto te puedes dirigir al archivo `elixir_colors/lib/elixir_colors.ex`
