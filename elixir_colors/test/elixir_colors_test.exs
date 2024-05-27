@@ -2,7 +2,7 @@ defmodule ElixirColorsTest do
   use ExUnit.Case
   doctest ElixirColors
 
-  test "greets the world" do
-    assert ElixirColors.hello() == :world
+  test "basico de texto a RGB" do
+    assert ElixirColors.name_to_rgb("rojo") == "ff0000"
   end
 end

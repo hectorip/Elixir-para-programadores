@@ -12,14 +12,26 @@ defmodule ElixirColors do
   """
 
   @doc """
-  Esta es la documentación de la función nombrada. 
+  Esta es la documentación de la función nombrada.
+  Algo muy bueno es que se pueden incluir ejemplod de uso que gracias
+  a la configuración del proyecto (que puedes ver en el archivo `mix.exs`)
+  se pueden también ejecutar como pruebas. Puedes probarlo 
+  en tu terminal con `mix test`, estando en la carpeta raíz del proyecto,
+  en este caso `elixir_colors`.
+
   ## Examples
 
-      iex> ElixirColors.hello()
-      :world
+      iex> ElixirColors.name_to_rgb("rojo")
+      "ff0000"
 
   """
-  def hello do
-    :world
+  def name_to_rgb(name) do
+    colors = %{
+      "rojo" => "ff0000",
+      "verde" => "00ff00",
+      "azul" => "0000ff"
+    }
+
+    Map.get(colors, name, "___")
   end
 end
