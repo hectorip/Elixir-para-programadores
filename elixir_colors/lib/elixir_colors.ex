@@ -25,6 +25,9 @@ defmodule ElixirColors do
       "ff0000"
 
   """
+  # Las funciones nombradas en Elixir se definen con la palabra reservada `def` seguido del nombre
+  # y entre paréntsis los argumentos. Para definir el cuerpo de la funnción no usamos
+  # llaves; lo encerramos entre `do` y `end`.
   def name_to_rgb(name) do
     colors = %{
       "rojo" => "ff0000",
@@ -32,6 +35,15 @@ defmodule ElixirColors do
       "azul" => "0000ff"
     }
 
+    # Las funciones siempre tienen un valor de retorno: el valor que devuelva
+    # lo último que se ejecute en la función
+
     Map.get(colors, name, "___")
   end
+
+  # En Elixir, también podemos pensar que `def` es una función que recibe dos argumentos:
+  # el nombre de lafunción junto con los argumentos y el cuerpo de la función. (En realidad
+  # es una macro, que veremos después).
+  # Pero lo importante es que a veces vas ver esta sintaxis cuando es una función corta
+  def expand(pair), do: "#{pair}#{pair}#{pair}"
 end
