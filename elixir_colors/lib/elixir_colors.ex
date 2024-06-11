@@ -8,7 +8,13 @@ defmodule ElixirColors do
   Esta es la documentación del módulo `ElixirColors`. Se usa para proveer
   infortmación en general sobre el módulo. Algo que no me gusta
   es que esta información se provee _después_ de la apertura del módulo
-  y como verás más adelante, la información
+  y, como verás más adelante, la documentación de las funciones se pone
+  antes.
+
+  Los módulos son la forma más básica de organizar el código
+  en Elixir. Este módulo es un ejemplo de un conjunto de funciones
+  para trabajar con representaciones de colores como ejemplo
+  sencillo de uso de funciones nombradas.
   """
 
   @doc """
@@ -42,8 +48,30 @@ defmodule ElixirColors do
   end
 
   # En Elixir, también podemos pensar que `def` es una función que recibe dos argumentos:
-  # el nombre de lafunción junto con los argumentos y el cuerpo de la función. (En realidad
+  # el nombre de la función junto con los argumentos y el cuerpo de la función. (En realidad
   # es una macro, que veremos después).
-  # Pero lo importante es que a veces vas ver esta sintaxis cuando es una función corta
+  # Pero lo importante es que a veces vas ver esta sintaxis cuando es una función corta:
+
+  # no necesita `end` porque es una línea
   def expand(pair), do: "#{pair}#{pair}#{pair}"
+
+  # Algo interesante es que las funciones están definidas tanto por su nombre como por
+  # el número de argumentos que reciben, que es lo que se llama la "aridad" (_arity_) de la función.
+  # Por ejemplo, las siguientes funciones se llaman igual pero tienen diferente aridad:
+
+  # Esta se llama `combine/2`
+  def combine(a, b) do
+    # Esta no es la forma de combinar colores, pero supongamos que sí
+    # Concatenando cadenas
+    a <> b
+  end
+
+  # Esta se llama `combine/3`
+  def combine(a, b, c) do
+    # Esta no es la forma de combinar colores, pero supongamos que sí
+    a <> b <> c
+  end
+
+  # Pero esto que acabas de ver sólo es una forma especial de la aplicación del pattern
+  # matching a los parámetros de las funciones.
 end
