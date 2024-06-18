@@ -61,8 +61,7 @@ defmodule ElixirColors do
 
   # Esta se llama `combine/2`
   def combine(a, b) do
-    # Esta no es la forma de combinar colores, pero supongamos que sí
-    # Concatenando cadenas
+    # Esta forma de combinar colores, pero supongamos que sí
     a <> b
   end
 
@@ -73,5 +72,5 @@ defmodule ElixirColors do
   end
 
   # Pero esto que acabas de ver sólo es una forma especial de la aplicación del pattern
-  # matching a los parámetros de las funciones.
+  # matching a los parámetros de las funciones
 end
