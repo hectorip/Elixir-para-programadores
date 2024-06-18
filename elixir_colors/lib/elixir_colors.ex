@@ -71,6 +71,19 @@ defmodule ElixirColors do
     a <> b <> c
   end
 
-  # Pero esto que acabas de ver sólo es una forma especial de la aplicación del pattern
-  # matching a los parámetros de las funciones
+  # Pero esto que acabas de ver sólo es una forma de la aplicación del pattern
+  # matching a los parámetros de las funciones, y puedes hacerlo con cualquier valor
+  # por ejemplo:
+
+  def is_white?("fff"), do: true
+  def is_white?("ffffff"), do: true
+  def is_white?(_), do: false
+
+  # En estas funcions que acabas de ver tenemos varias cosas interesantes:
+  # es una función con tres "cabezas" (heads), con el mismo número de argumentos
+  # y que hacen empatado directamtmente con el valor que representa blanco, en las dos opciones que
+  # podemos tener. Esto funciona como un switch de otros lenguajes, la primera defición que
+  # empate con el patrón que definimos es la que se ejecuta.
+  # Por eso, si tuviéramos la que manda el valor a `_` (es como si desecharamos el valor), ald principio
+  # las funciones de abajo no podrían ejecutarse nunca, porque este patrón siempre empata con todo.
 end
