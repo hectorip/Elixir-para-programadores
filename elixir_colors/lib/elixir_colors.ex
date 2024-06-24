@@ -79,11 +79,17 @@ defmodule ElixirColors do
   def is_white?("ffffff"), do: true
   def is_white?(_), do: false
 
-  # En estas funcions que acabas de ver tenemos varias cosas interesantes:
+  # En estas funciones que acabas de ver tenemos varias cosas interesantes:
   # es una función con tres "cabezas" (heads), con el mismo número de argumentos
   # y que hacen empatado directamtmente con el valor que representa blanco, en las dos opciones que
   # podemos tener. Esto funciona como un switch de otros lenguajes, la primera defición que
   # empate con el patrón que definimos es la que se ejecuta.
-  # Por eso, si tuviéramos la que manda el valor a `_` (es como si desecharamos el valor), ald principio
+  # Por eso, si tuviéramos la que manda el valor a `_` (es como si desecharamos el valor), al principio
   # las funciones de abajo no podrían ejecutarse nunca, porque este patrón siempre empata con todo.
+  #
+  # Otra cosa insteresante no tan presente en otros lenguajes es el `?` al final del nombre de la función.
+  # Es una costumbre ponerlo en Elixir cuando una función devuelve `true` o `false`, pero no es obligatorio
+  # sino una buena idea para que el código sea más legible (esto viene direactamente de la comunidad de Ruby)
+
+  # --------------------------------------------
 end
