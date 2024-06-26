@@ -92,4 +92,15 @@ defmodule ElixirColors do
   # sino una buena idea para que el código sea más legible (esto viene direactamente de la comunidad de Ruby)
 
   # --------------------------------------------
+  # Todas las funciones que acabas de ver son públicas, es decir, se
+  # pueden llmar desde fuera del módulo, pero también podemos definir funciones
+  # privadas con `defp`. Estas funciones sólo se pueden llamar desde dentro del
+  # módulo. Poder definir funciones privadas sirve mucho para crear interfaces
+  # de módulos que sean más útiles y fáciles de usar, así como evitar dependencias
+  # innecesarias entre módulos, al evitar exponer la implmentación completa de las
+  # funciones.
+
+  defp normalize_color(color) do
+    String.downcase(color)
+  end
 end
