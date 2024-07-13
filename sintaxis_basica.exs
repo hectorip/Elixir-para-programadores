@@ -1,7 +1,5 @@
 # Elixir se parece mucho a tu lenguaje tradcional
-
 # Las variales se declaran solo indicando el nombre
-
 a = 1
 
 # Y los nombres la mayoría de las veces se comportan como variables comunes

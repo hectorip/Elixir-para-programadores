@@ -98,9 +98,9 @@ defmodule ElixirColors do
   # módulo. Poder definir funciones privadas sirve mucho para crear interfaces
   # de módulos que sean más útiles y fáciles de usar, así como evitar dependencias
   # innecesarias entre módulos, al evitar exponer la implmentación completa de las
-  # funciones.
+  # funciones que el módulo provee.
 
-  defp normalize_color(color) do
+  defp normalize(color) do
     String.downcase(color)
   end
 end
