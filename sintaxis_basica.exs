@@ -48,12 +48,16 @@ f = 1.0 + 2.0 / (7.0 * 4.0 - 2.0)
 numero_grande = 1_000_000
 
 # Pero también podemos usar notación científica
+# Por ejemplo, 1.0e-10 es 1.0 * 10^-10
+# O sea, 0.0000000001
 
 a = 1.0e-10
 
 # También tenemos cadenas de texto, que en realidad son listas de valores binarios
 # especiales que representan caracteres Unicode
 # Las cadenas de texto SIEMPRE se escriben con comillas dobles, no uses comillas simples
+# porque te dará un error.
+#
 nombre = "Héctor"
 # Tenemos interpolación de cadenas, es decir, podemos insertar texto en ellas
 # con `#{}`
@@ -61,9 +65,9 @@ saludo = "Hola, #{nombre}"
 
 # Las cadenas por default son UTF-8, así que puedes usar caracteres especiales sin
 # problemas
+#
 
 cadena_con_emojis = "🎉🎉🎉"
-
 # El siguiente tipo de dato que se usa mucho es el Átomo
 # los átomos son constatnes que valen su propio nombre
 # Si no los has usado en otros lenguajes, pueden paracer misteriosos
