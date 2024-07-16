@@ -1,4 +1,6 @@
-# Elixir se parece mucho a tu lenguaje tradcional
+# Elixir se parece mucho a tu lenguaje tradcional, porque está basado en la
+# sintaxis de Ruby, pero hereda necesariamente varias cosas de Erlang, el lenguaje
+# original del entorno de ejecución en el que corre.
 # Las variales se declaran solo indicando el nombre
 a = 1
 
@@ -290,11 +292,9 @@ persona[:nombre]
 # cuando tienes llaves que son átomos:
 
 persona.nombre
-
 # La versión con corchetHes es equivalente al Map.get con la desventaja de que 
 # no le puede mandar valor default, y la versión con punto te dará un error
 # en ejecución si la llave no existe, terminando el proceso.
-#
 # Una función muy interesante es la de `update`, que te permite crear un nuevo diccionario
 
 persona =
@@ -309,7 +309,7 @@ persona =
 # organización ZZde código, para terminar con este mini tutorial de la sintaxis básica, el sieuiente paso
 # será empezar a hacer programas.
 #
-# Empecemos con algo que es inconfundible de los lengaujes funcionales y que hasta
+# Empecemos con algo que es muy común en los lenguajes funcionales y que hasta
 # operadores especiales tienen: la composición de funciones.
 
 # Llamamos coponer dos funciones cuando el resultado de una se lo pasamos a otra,
@@ -326,8 +326,8 @@ mi_numero = String.to_integer(String.trim(mi_cadena_de_texto))
 # tener que irse al fondo y después regresar al principio para saber qué proceso
 # por el que los datos pasaron.
 
-# En Elixir y en muchos lengaujes funcionales existe el operador `|>` o uno parecido,
-# que le podemos llamar "pipe" o "tubería" en español, que nos permite hacer lo mismo
+# En Elixir y en otros lengaujes funcionales existe el operador `|>` o algo equivalente,
+# le podemos llamar "pipe" o "tubería" en español, que nos permite hacer lo mismo
 # pero de una forma más natural.
 
 mi_numero = mi_cadena_de_texto |> String.trim() |> String.to_integer()
@@ -343,6 +343,8 @@ mi_numero = mi_cadena_de_texto |> String.trim() |> String.to_integer()
 |> Enum.reduce(0, fn x, acc -> x + acc end)
 
 # Aquí acabas de ver tres cosas a parte de el `pipe operator` que son diferentes en
+# otros lenguajes y que son muy comunes en Elixir:
+
 # Elixir:
 #
 # - El rango `1..10` que define una colección de números desde el primer
@@ -356,5 +358,5 @@ mi_numero = mi_cadena_de_texto |> String.trim() |> String.to_integer()
 
 # Me parece que eso es todo lo que necesitas saber de la sintaxis pura de Elixir
 # el siguiente paso es aprender sobre módulos y funciones nombradas.
-# 
+
 # Para esto te puedes dirigir al archivo `elixir_colors/lib/elixir_colors.ex`
