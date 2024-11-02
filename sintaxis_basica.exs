@@ -41,7 +41,7 @@ a = 2
 
 a = 1 + 2 / (7 * 4 - 2)
 
-# Flotantes y las misma operaciones
+# Flotantes y las mismas operaciones
 
 f = 1.0 + 2.0 / (7.0 * 4.0 - 2.0)
 
@@ -67,7 +67,6 @@ saludo = "Hola, #{nombre}"
 
 # Las cadenas por default son UTF-8, así que puedes usar caracteres especiales sin
 # problemas
-#
 
 cadena_con_emojis = "🎉🎉🎉"
 # El siguiente tipo de dato que se usa mucho es el Átomo
